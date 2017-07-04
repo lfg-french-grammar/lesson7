@@ -1,0 +1,6 @@
+clear
+source vowel-alternations.xfst
+source rules.xfst
+read lexc group-1.lexc
+compose
+save stack group-1.fst

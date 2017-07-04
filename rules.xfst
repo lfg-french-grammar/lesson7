@@ -1,0 +1,17 @@
+clear
+define MB "^" ;
+define V [a | â | o ] ;
+define InsertE [MB -> e || g _ V ] ;
+define PutCedilla [ c MB -> ç ||  _  V ] ;
+define DeleteMB [ MB -> 0 ] ;
+regex InsertE ;
+down mang^ons
+down mang^ions
+regex PutCedilla ;
+down annonc^ions
+down commenc^âmes
+down annonc^ons
+load vowel-alternations.fst
+regex DeleteMB ;
+turn stack
+compose

@@ -1,0 +1,23 @@
+# -*- encoding: utf-8 -*-
+# vowel-alternations.xfst
+clear
+define RC [ $ ∅ ] ;
+regex [ ə -> ɛ || _ RC ] ;
+regex [ "/" -> t || t _ RC ] ;
+regex [ "/" -> l || l _ RC ] ;
+regex [ e -> ɛ || "/" _ RC ] ;
+regex [ e -> é || "/" _ "/" ] ;
+regex [ ɛ -> è ] ;
+regex [ ə -> e ] ;
+regex [ ∅ -> 0 ] ; 
+regex [ "/" -> 0 ] ;
+turn stack
+compose
+save stack vowel-alternations.fst
+down décr/e/t^∅e
+down dér/e/gl^∅erai
+down dér/e/gl^ons
+down səm^∅e
+down səm^∅erai
+down səm^ons
+down səm^é
